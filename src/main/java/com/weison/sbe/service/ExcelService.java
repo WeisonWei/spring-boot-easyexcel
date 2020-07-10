@@ -18,7 +18,7 @@ public class ExcelService {
             return Collections.emptyList();
         }
         InputStream inputStream = file.getInputStream();
-        EasyExcel.read(inputStream, User.class, new UploadDataListener()).sheet().doRead();
+        EasyExcel.read(inputStream, User.class, new UserDataListener()).sheet().doRead();
         return Collections.emptyList();
     }
 
